@@ -220,7 +220,55 @@ CONTAINER ID se genera automaticamente por Docker
 > No se permite tener 2 container con el mismo nombre en nuestra instalacion usar docker rename
 
 
+# Comando básicos para la administración de imagenes y contenedores en docker.
 
+## Contenedores
+
+### Lifecycle
+
+* `docker create` *Crea un contenedor pero no lo comienza*
+* `docker rename` *Permite renombrar al contenedor*.
+* `docker run` *Crea y comienza un contenedor en una operación*.
+* `docker rm` *Elima un contenedor*.
+* `docker update` *Actualiza los recursos limitados de un contenedor*.
+
+### Iniciar y detener
+
+* `docker start` *comienza un contenedor si se cayó o salió*.
+* `docker stop` *detiene un contenedor*.
+* `docker restart` *detiene y comienza un contenedor*.
+* `docker pause` *pausa un contenedor corriendo, "lo congela"*. 
+* `docker unpause` *quita la pausa de un contenedor corriendo*.
+* `docker wait` *bloquea hasta que un contenedor corriendo se detiene*.
+* `docker kill` *envía una SIGKILL a un contenedor corriendo*.
+* `docker attach` *se conecta a un contenedor corriendo*.
+
+### Informativos
+
+* `docker ps` *muestra los contenedores corriendo*.
+* `docker ps -a`   *muestra todos los contenedores corriendo y detenidos*.
+* `docker logs` *obtiene logs de un container*.
+* `docker inspect` *observa toda la info en un contenedor* _incluyendo variables de entorno_.
+* `docker events` *obtiene eventos de un contenedor*.
+* `docker port` *muestra el puerto publico de un contenedor*.
+* `docker top` *muestra los procesos corriendo en un contenedor*.
+* `docker stats` *muestra las estadisticas de recursos usados por contenedor*.
+* `docker diff` *muestra los archivos cambiados en el FS del contenedor*.
+* `docker stats --all` *muestra una lista de los contenedores corriendo*.
+`
+## Imagenes
+
+### Lifecycle
+
+* `docker images` *muestra todas las imagenes y tamaños*
+* `docker import` *crea una imagen de un tarball*
+* `docker build` *crea imagen de un  Dockerfile*
+* `docker commit` *crea imagen de un contenedor, pausandolo temporalmente si esta corriendo.*
+* `docker rmi` *remueve una imagen*.
+
+### Informativos
+* `docker history` *muestra el historial de una imagen*.
+* `docker tag` *taggea una imagen a un nombre asignado*.
 
 
 ## 10. El modo interactivo
