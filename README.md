@@ -738,7 +738,7 @@ En docker compose, hablamos de servicios, el cual puede tener mas de un contened
 RECURSOS
 
 - [Install Docker Compose](https://docs.docker.com/compose/install/)
-
+- [Docker compose](https://iesgn.github.io/curso_docker_2021/sesion5/comando.html)
 
 
 ## 23. Subcomandos de Docker Compose
